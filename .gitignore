@@ -20,3 +20,7 @@ bin
 /DataAnnotations.ConsoleApp/bin
 /DataAnnotations.Database/obj
 /DataAnnotations.Database/bin
+/MultipleDbContexts.ConsoleApp/obj
+/MultipleDbContexts.ConsoleApp/bin
+/MultipleDbContexts.Database/obj
+MultipleDbContexts.Database/bin
