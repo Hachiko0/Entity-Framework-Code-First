@@ -12,3 +12,11 @@ bin
 /ExistingDatabase.Database/obj
 /ExistingDatabase.ConsoleApp/obj
 /ExistingDatabase.ConsoleApp/bin
+/ConfigureMappings.Database/bin
+/ConfigureMappings.Database/obj
+/ConfigureMappings.ConsoleApp/obj
+/ConfigureMappings.ConsoleApp/bin
+/DataAnnotations.ConsoleApp/obj
+/DataAnnotations.ConsoleApp/bin
+/DataAnnotations.Database/obj
+/DataAnnotations.Database/bin
