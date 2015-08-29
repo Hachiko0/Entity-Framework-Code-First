@@ -1,0 +1,14 @@
+bin
+/MultipleDbContexts.ConsoleApp/obj
+/MultipleDbContexts.First/obj
+/MultipleDbContexts.First/bin
+/MultipleDbContexts.Second/bin
+/MultipleDbContexts.Second/obj
+/FluentApi.Database/bin
+/FluentApi.Database/obj
+/FluentApi.ConsoleApp/bin
+/FluentApi.ConsoleApp/obj
+/ExistingDatabase.Database/bin
+/ExistingDatabase.Database/obj
+/ExistingDatabase.ConsoleApp/obj
+/ExistingDatabase.ConsoleApp/bin
