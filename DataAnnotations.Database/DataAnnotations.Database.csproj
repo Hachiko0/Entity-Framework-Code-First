@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BBE90750-A9D9-483A-A2B8-DB9CA299A045}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAnnotations.Database</RootNamespace>
+    <AssemblyName>DataAnnotations.Database</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201508162240552_InitialCreate.cs" />
+    <Compile Include="Migrations\201508162240552_InitialCreate.Designer.cs">
+      <DependentUpon>201508162240552_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508272148049_AddTimeStamp.cs" />
+    <Compile Include="Migrations\201508272148049_AddTimeStamp.Designer.cs">
+      <DependentUpon>201508272148049_AddTimeStamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508272216126_AddPlayerAvatar.cs" />
+    <Compile Include="Migrations\201508272216126_AddPlayerAvatar.Designer.cs">
+      <DependentUpon>201508272216126_AddPlayerAvatar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508282249075_Test.cs" />
+    <Compile Include="Migrations\201508282249075_Test.Designer.cs">
+      <DependentUpon>201508282249075_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508282255012_GoalScoredAdded.cs" />
+    <Compile Include="Migrations\201508282255012_GoalScoredAdded.Designer.cs">
+      <DependentUpon>201508282255012_GoalScoredAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508282316178_AddRefereeTable.cs" />
+    <Compile Include="Migrations\201508282316178_AddRefereeTable.Designer.cs">
+      <DependentUpon>201508282316178_AddRefereeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508282333111_Asdf.cs" />
+    <Compile Include="Migrations\201508282333111_Asdf.Designer.cs">
+      <DependentUpon>201508282333111_Asdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Match.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Referee.cs" />
+    <Compile Include="PremierLeagueContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Team.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserForeignKey.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201508162240552_InitialCreate.resx">
+      <DependentUpon>201508162240552_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508272148049_AddTimeStamp.resx">
+      <DependentUpon>201508272148049_AddTimeStamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508272216126_AddPlayerAvatar.resx">
+      <DependentUpon>201508272216126_AddPlayerAvatar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508282249075_Test.resx">
+      <DependentUpon>201508282249075_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508282255012_GoalScoredAdded.resx">
+      <DependentUpon>201508282255012_GoalScoredAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508282316178_AddRefereeTable.resx">
+      <DependentUpon>201508282316178_AddRefereeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508282333111_Asdf.resx">
+      <DependentUpon>201508282333111_Asdf.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

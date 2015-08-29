@@ -1,0 +1,14 @@
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\bin\Debug\MultipleDbContexts.ConsoleApp.exe.config
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\bin\Debug\MultipleDbContexts.ConsoleApp.exe
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\bin\Debug\MultipleDbContexts.ConsoleApp.pdb
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\bin\Debug\EntityFramework.dll
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\bin\Debug\MultipleDbContexts.First.dll
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\bin\Debug\MultipleDbContexts.Second.dll
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\bin\Debug\MultipleDbContexts.First.pdb
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\bin\Debug\MultipleDbContexts.Second.pdb
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\bin\Debug\EntityFramework.xml
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\obj\Debug\MultipleDbContexts.ConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\obj\Debug\MultipleDbContexts.ConsoleApp.exe
+C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\MultipleDbContexts.ConsoleApp\obj\Debug\MultipleDbContexts.ConsoleApp.pdb
