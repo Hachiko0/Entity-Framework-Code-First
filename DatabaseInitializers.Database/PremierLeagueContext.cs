@@ -4,15 +4,29 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure.Annotations;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace FluentApi.Database
+namespace DatabaseInitializers.Database
 {
+    public class MyInitializer : DropCreateDatabaseAlways<PremierLeagueContext>
+    {
+        protected override void Seed(PremierLeagueContext context)
+        {
+            context.Players.Add(new Player()
+                {
+                    Age = 33,
+                    FirstName = "aaa",
+                    LastName = "bbb",
+                });
+
+            base.Seed(context);
+        }
+    }
     public class PremierLeagueContext : DbContext
     {
         public PremierLeagueContext()
             : base("PremierLeagueDbContext")
         {
             //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseIfModelChanges<PremierLeagueContext>());
-            //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MigrateDatabaseToLatestVersion<PremierLeagueContext, FluentApi.Database.Migrations.Configuration>());
+            //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MigrateDatabaseToLatestVersion<PremierLeagueContext, DatabaseInitializers.Database.Migrations.Configuration>());
             //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseAlways<PremierLeagueContext>());
         }
         public virtual IDbSet<Team> Teams { get; set; }

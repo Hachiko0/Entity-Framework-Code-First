@@ -12,6 +12,7 @@ namespace FluentApi.ConsoleApp
     {
         static void Main(string[] args)
         {
+            System.Data.Entity.Database.SetInitializer(new DropCreateDatabaseIfModelChanges<PremierLeagueContext>());
             using(var context = new PremierLeagueContext())
             {
                 var players = context.Players.ToList();
