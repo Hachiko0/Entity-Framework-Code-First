@@ -1,14 +1,14 @@
-namespace MultipleDbContexts.First.Migrations
+namespace MultipleDbContexts.Second.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class FirstContextInitialMigration : DbMigration
+    public partial class InitialMigration : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.FirstEntities",
+                "dbo.SecondEntities",
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
@@ -20,7 +20,7 @@ namespace MultipleDbContexts.First.Migrations
         
         public override void Down()
         {
-            DropTable("dbo.FirstEntities");
+            DropTable("dbo.SecondEntities");
         }
     }
 }

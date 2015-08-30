@@ -46,20 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FirstContext.cs" />
-    <Compile Include="Migrations\201508221805215_SecondContextInitialMigration.cs" />
-    <Compile Include="Migrations\201508221805215_SecondContextInitialMigration.Designer.cs">
-      <DependentUpon>201508221805215_SecondContextInitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201508301415135_InitialMigration.cs" />
+    <Compile Include="Migrations\201508301415135_InitialMigration.Designer.cs">
+      <DependentUpon>201508301415135_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="SecondContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201508221805215_SecondContextInitialMigration.resx">
-      <DependentUpon>201508221805215_SecondContextInitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201508301415135_InitialMigration.resx">
+      <DependentUpon>201508301415135_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,16 +5,16 @@ namespace MultipleDbContexts.Second.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<SecondContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<MultipleDbContexts.Second.SecondContext>
     {
         public Configuration()
         {
-            this.AutomaticMigrationsEnabled = false;
-            this.AutomaticMigrationDataLossAllowed = false;
-            this.ContextKey = "SecondContext";
+            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationDataLossAllowed = false;
+            ContextKey = "SecondModel";
         }
 
-        protected override void Seed(SecondContext context)
+        protected override void Seed(MultipleDbContexts.Second.SecondContext context)
         {
             //  This method will be called after migrating to the latest version.
 

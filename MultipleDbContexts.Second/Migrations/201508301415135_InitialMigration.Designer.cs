@@ -7,13 +7,13 @@ namespace MultipleDbContexts.Second.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class SecondContextInitialMigration : IMigrationMetadata
+    public sealed partial class InitialMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SecondContextInitialMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201508221805215_SecondContextInitialMigration"; }
+            get { return "201508301415135_InitialMigration"; }
         }
         
         string IMigrationMetadata.Source

@@ -5,16 +5,16 @@ namespace MultipleDbContexts.First.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<FirstContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<MultipleDbContexts.First.FirstContext>
     {
         public Configuration()
         {
-            this.AutomaticMigrationsEnabled = false;
-            this.AutomaticMigrationDataLossAllowed = false;
-            this.ContextKey = "FirstContext";
+            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationDataLossAllowed = false;
+            ContextKey = "FirstModel";
         }
 
-        protected override void Seed(FirstContext context)
+        protected override void Seed(MultipleDbContexts.First.FirstContext context)
         {
             //  This method will be called after migrating to the latest version.
 
