@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.Entity;
+﻿using System.Linq;
 using DatabaseInitializers.Database;
+using System.Data.Entity;
 
 namespace DatabaseInitializers.ConsoleApp
 {
@@ -12,11 +8,10 @@ namespace DatabaseInitializers.ConsoleApp
     {
         static void Main(string[] args)
         {
-            System.Data.Entity.Database.SetInitializer(new DropCreateDatabaseAlways<PremierLeagueContext>());
-
-            using(var db = new PremierLeagueContext())
+            using (var db = new PremierLeagueContext())
             {
                 var players = db.Players.ToList();
+                players.ForEach(p => System.Console.WriteLine(p.FirstName));
             }
         }
     }

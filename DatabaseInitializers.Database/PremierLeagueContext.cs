@@ -25,6 +25,7 @@ namespace DatabaseInitializers.Database
         public PremierLeagueContext()
             : base("PremierLeagueDbContext")
         {
+            System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MyInitializer());
             //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseIfModelChanges<PremierLeagueContext>());
             //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MigrateDatabaseToLatestVersion<PremierLeagueContext, DatabaseInitializers.Database.Migrations.Configuration>());
             //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseAlways<PremierLeagueContext>());
