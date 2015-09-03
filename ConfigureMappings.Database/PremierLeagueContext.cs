@@ -102,11 +102,14 @@ namespace ConfigureMappings.Database
                 });
 
 
-            //Composite key as foreign key 
+            //Composite key as foreign key
+
+            //map the primary key 
             modelBuilder
                 .Entity<User>()
                 .HasKey(t => new { t.Id, t.EGN });
 
+            //map the foreign key
             modelBuilder
                 .Entity<UserForeignKey>()
                 .HasRequired(ufk => ufk.User)
