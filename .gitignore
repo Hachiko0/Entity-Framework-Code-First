@@ -184,3 +184,4 @@ UpgradeLog*.htm
 
 src/.vs/config/applicationhost.config
 connectionStrings.local.config
+/*.suo
