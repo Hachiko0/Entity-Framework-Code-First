@@ -1,6 +1,5 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 namespace DataAnnotations.Database
 {
     public class Player
@@ -14,8 +13,8 @@ namespace DataAnnotations.Database
         public string LastName { get; set; }
 
         //applied on byte[] only
-        //this property is part of the filter just like LastName which
-        //Every time that a row with a Timestamp column is modified or inserted, the incremented database Timestamp value is inserted in the rowversion column.
+        //this property is part of the filter just like LastName
+        //Every time  a row with a Timestamp column is modified or inserted, the incremented database Timestamp value is inserted in the rowversion column.
         //[Timestamp]
         //public byte[] RowVersion { get; set; }
 

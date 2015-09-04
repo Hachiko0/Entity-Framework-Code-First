@@ -185,3 +185,5 @@ UpgradeLog*.htm
 src/.vs/config/applicationhost.config
 connectionStrings.local.config
 /*.suo
+/DataAnnotations.ConsoleApp/bin
+/DataAnnotations.ConsoleApp/obj
