@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MigrationFolder\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Match.cs" />
     <Compile Include="Models\Player.cs" />
