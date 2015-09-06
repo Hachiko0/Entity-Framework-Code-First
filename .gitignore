@@ -193,3 +193,13 @@ connectionStrings.local.config
 /ConfigureMappings.ConsoleApp/obj
 /ConfigureMappings.Database/obj
 /ConfigureMappings.Database/bin
+/MultipleDbContexts.ConsoleApp/obj
+/MultipleDbContexts.ConsoleApp/bin
+/MultipleDbContexts.First/bin
+/MultipleDbContexts.First/obj
+/MultipleDbContexts.Second/obj
+/MultipleDbContexts.Second/bin
+/ExistingDatabase.ConsoleApp/obj
+/ExistingDatabase.ConsoleApp/bin
+/ExistingDatabase.Database/obj
+/ExistingDatabase.Database/bin
