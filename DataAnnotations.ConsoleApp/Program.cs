@@ -11,20 +11,21 @@ namespace DataAnnotations.ConsoleApp
         {
             using(var db = new PremierLeagueContext())
             {
-                var player = db.Players.FirstOrDefault();
-                player.Age = 414;
-                db.Entry(player).State = System.Data.Entity.EntityState.Modified;
-                db.SaveChanges();
+                db.Database.CreateIfNotExists();
+                //var player = db.Players.FirstOrDefault();
+                //player.Age = 414;
+                //db.Entry(player).State = System.Data.Entity.EntityState.Modified;
+                //db.SaveChanges();
 
-                var newTeam = new Team()
-                {
-                    Name = "Bornemuth",
-                    Division = "Premier League",
+                //var newTeam = new Team()
+                //{
+                //    Name = "Bornemuth",
+                //    Division = "Premier League",
 
-                };
-                db.Teams.Add(newTeam);
-                db.SaveChanges();
-                System.Console.WriteLine(newTeam.DateCreated);
+                //};
+                //db.Teams.Add(newTeam);
+                //db.SaveChanges();
+                //System.Console.WriteLine(newTeam.DateCreated);
                 //var refer = new Referee
                 //{
                 //    Id = 66,

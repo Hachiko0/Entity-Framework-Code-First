@@ -1,15 +1,17 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace DataAnnotations.Database
 {
+    [Table("Player", Schema = "admin")]
     public class Player
     {
-        [Key]
-        public int PrimaryKey { get; set; }
+        public int Id { get; set; }
         public string FirstName { get; set; }
 
         //when we update or delete, the player record is filtered by last name too and throws exception if it different than the current last name
-        [ConcurrencyCheck]
+        //[ConcurrencyCheck]
         public string LastName { get; set; }
 
         //applied on byte[] only
@@ -22,10 +24,10 @@ namespace DataAnnotations.Database
 
         public int Age { get; set; }
 
-        public int TeamPrimmaryKey { get; set; }
+        //public int TeamPrimmaryKey { get; set; }
 
         public int TeamId { get; set; } //not working(there is no primary key TeamId property in Team) unless we have foreign key attribute for the nav property
         //[ForeignKey("TeamId")]
-        public Team Team { get; set; }
+        //public Team Team { get; set; }
     }
 }

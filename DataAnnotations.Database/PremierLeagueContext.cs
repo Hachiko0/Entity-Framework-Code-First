@@ -14,11 +14,15 @@ namespace DataAnnotations.Database
         public virtual IDbSet<Team> Teams { get; set; }
         public virtual IDbSet<Player> Players { get; set; }
 
+        public virtual IDbSet<Match> Matches { get; set; }
+
         public virtual IDbSet<User> Users { get; set; }
 
         public virtual IDbSet<Referee> Referees { get; set; }
 
-        //public virtual IDbSet<UserForeignKey> UserForeignKey { get; set; }
+        public virtual IDbSet<Address> Addresses { get; set; }
+
+        public virtual IDbSet<UserForeignKey> UserForeignKey { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

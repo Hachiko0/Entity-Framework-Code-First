@@ -187,3 +187,10 @@ connectionStrings.local.config
 /*.suo
 /DataAnnotations.ConsoleApp/bin
 /DataAnnotations.ConsoleApp/obj
+/DataAnnotations.ConsoleApp/obj
+/DataAnnotations.ConsoleApp/bin
+/DataAnnotations.ConsoleApp/bin
+/DataAnnotations.ConsoleApp/bin
+/DataAnnotations.ConsoleApp/bin
+/DataAnnotations.Database/bin
+/DataAnnotations.Database/obj

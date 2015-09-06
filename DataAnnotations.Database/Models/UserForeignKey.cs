@@ -10,15 +10,15 @@ namespace DataAnnotations.Database
 
         public string SomeData { get; set; }
 
-        [ForeignKey("User")]
-        [Column(Order = 2)]
+        //[ForeignKey("User")]
+        //[Column(Order = 2)]
         public int UserId { get; set; }
 
-        [ForeignKey("User")]
-        [Column(Order = 3)]
-        [Required]
+        //[ForeignKey("User")]
+        //[Column(Order = 3)]
+        //[Required]
         public string EGNId { get; set; }
 
-        public User User { get; set; }
+        //public User User { get; set; }
     }
 }
