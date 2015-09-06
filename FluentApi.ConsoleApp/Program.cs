@@ -12,11 +12,28 @@ namespace FluentApi.ConsoleApp
     {
         static void Main(string[] args)
         {
-            System.Data.Entity.Database.SetInitializer(new DropCreateDatabaseIfModelChanges<PremierLeagueContext>());
             using(var context = new PremierLeagueContext())
             {
-                var players = context.Players.ToList();
-                var employees = context.Employees.ToList();
+                var emiratesMatch = context.Matches.Find(1);
+                emiratesMatch.Date = DateTime.UtcNow;
+                Console.WriteLine(emiratesMatch.Stadium);
+                context.Entry(emiratesMatch).State = EntityState.Modified;
+
+                //var user = new User
+                //{
+                //    Address = new Address
+                //    {
+                //        Id = 33
+                //    }
+                //};
+                //context.Users.Add(user);
+                context.SaveChanges();
+
+
+                //var players = context.Players.ToList();
+                //var employees = context.Employees.ToList();
+
+
                 //var employee = new Employee()
                 //{
                 //    FullName = "Dimitar Berbatov",
@@ -34,4 +51,4 @@ namespace FluentApi.ConsoleApp
             }
         }
     }
-}
+}   

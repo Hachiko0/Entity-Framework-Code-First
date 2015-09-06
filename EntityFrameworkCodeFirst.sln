@@ -44,6 +44,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLScripts", "SQLScripts", "{AE8757CF-21E5-44F0-B8F3-7D3AA45972B4}"
 	ProjectSection(SolutionItems) = preProject
 		AddDefaultConstraint.sql = AddDefaultConstraint.sql
+		SelectTimeStamp.sql = SelectTimeStamp.sql
 	EndProjectSection
 EndProject
 Global
