@@ -184,13 +184,12 @@ UpgradeLog*.htm
 
 src/.vs/config/applicationhost.config
 connectionStrings.local.config
-/*.suo
-/DataAnnotations.ConsoleApp/bin
 /DataAnnotations.ConsoleApp/obj
-/DataAnnotations.ConsoleApp/obj
-/DataAnnotations.ConsoleApp/bin
-/DataAnnotations.ConsoleApp/bin
-/DataAnnotations.ConsoleApp/bin
-/DataAnnotations.ConsoleApp/bin
-/DataAnnotations.Database/bin
-/DataAnnotations.Database/obj
+/FluentApi.ConsoleApp/bin
+/FluentApi.ConsoleApp/obj
+/FluentApi.Database/obj
+/FluentApi.Database/bin
+/ConfigureMappings.ConsoleApp/bin
+/ConfigureMappings.ConsoleApp/obj
+/ConfigureMappings.Database/obj
+/ConfigureMappings.Database/bin

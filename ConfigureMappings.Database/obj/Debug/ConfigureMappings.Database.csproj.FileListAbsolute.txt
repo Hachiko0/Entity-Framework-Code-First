@@ -1,9 +1,0 @@
-C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\ConfigureMappings.Database\obj\Debug\ConfigureMappings.Database.csprojResolveAssemblyReference.cache
-C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\ConfigureMappings.Database\bin\Debug\ConfigureMappings.Database.dll
-C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\ConfigureMappings.Database\bin\Debug\ConfigureMappings.Database.pdb
-C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\ConfigureMappings.Database\bin\Debug\EntityFramework.dll
-C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\ConfigureMappings.Database\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\ConfigureMappings.Database\bin\Debug\EntityFramework.xml
-C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\ConfigureMappings.Database\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\ConfigureMappings.Database\obj\Debug\ConfigureMappings.Database.dll
-C:\Users\Krasi\Desktop\SPA Web API\EntityFrameworkCodeFirst\ConfigureMappings.Database\obj\Debug\ConfigureMappings.Database.pdb

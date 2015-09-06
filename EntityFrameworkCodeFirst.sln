@@ -41,6 +41,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseInitializers.Consol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseInitializers.Database", "DatabaseInitializers.Database\DatabaseInitializers.Database.csproj", "{DDF915A6-3432-41F0-B46C-E2DFA652B45C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLScripts", "SQLScripts", "{AE8757CF-21E5-44F0-B8F3-7D3AA45972B4}"
+	ProjectSection(SolutionItems) = preProject
+		AddDefaultConstraint.sql = AddDefaultConstraint.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
