@@ -19,11 +19,11 @@ namespace ConfigureMappings.Database
     public class PremierLeagueContext : DbContext
     {
         public PremierLeagueContext()
-            : base("ConfigureMappings")
+            : base("PremierLeagueDbContext")
         {
-            System.Data.Entity.Database.SetInitializer(new MyInitializer());
+            //System.Data.Entity.Database.SetInitializer(new MyInitializer());
             //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseIfModelChanges<PremierLeagueContext>());
-            //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MigrateDatabaseToLatestVersion<PremierLeagueContext, FluentApi.Database.Migrations.Configuration>());
+            //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MigrateDatabaseToLatestVersion<PremierLeagueContext, ConfigureMappings.Database.Migrations.Configuration>());
             //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseAlways<PremierLeagueContext>());
         }
 
