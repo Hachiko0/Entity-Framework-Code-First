@@ -16,9 +16,6 @@ namespace ConfigureMappings.Database
 
         public int NumberOfTeams { get; set; }
 
-
-        public string FirstDevChange { get; set; }
-
         public virtual ICollection<Team> Teams { get; set; }
     }
 }
