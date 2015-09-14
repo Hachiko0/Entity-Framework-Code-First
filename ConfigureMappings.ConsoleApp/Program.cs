@@ -15,7 +15,7 @@ namespace ConfigureMappings.ConsoleApp
             {
                 var referee = new Referee
                 {
-                    EGN = "327472342",
+                    EGN = "3274723428",
                     FirstName = "Howard",
                     FamilyName = "Webb",
                     RedCardsShowed = 65,
