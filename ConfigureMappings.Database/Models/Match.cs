@@ -20,5 +20,7 @@ namespace ConfigureMappings.Database
 
         public int AwayTeamId { get; set; }
         public virtual Team AwayTeam { get; set; }
+
+        public string SecondDevChange { get; set; }
     }
 }
