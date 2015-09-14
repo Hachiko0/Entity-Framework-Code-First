@@ -13,7 +13,17 @@ namespace ConfigureMappings.ConsoleApp
         {
             using(var context = new PremierLeagueContext())
             {
-                context.Database.Initialize(false);
+                var referee = new Referee
+                {
+                    EGN = "327472342",
+                    FirstName = "Howard",
+                    FamilyName = "Webb",
+                    RedCardsShowed = 65,
+                    YellowCardsShowed = 150,
+                };
+
+                context.Referees.Add(referee);
+                context.SaveChanges();
             }
         }
     }
