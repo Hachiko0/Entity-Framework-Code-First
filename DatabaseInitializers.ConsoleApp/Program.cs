@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using DatabaseInitializers.Database;
-using System.Data.Entity;
 
 namespace DatabaseInitializers.ConsoleApp
 {

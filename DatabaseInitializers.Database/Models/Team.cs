@@ -9,7 +9,7 @@ namespace DatabaseInitializers.Database
 {
     public class Team
     {
-        public int TeamPrimmaryKey { get; set; }
+        public int Id { get; set; }
 
         public string Name { get; set; }
     }
