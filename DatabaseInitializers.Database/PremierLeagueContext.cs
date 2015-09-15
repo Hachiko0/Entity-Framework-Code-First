@@ -11,10 +11,11 @@ namespace DatabaseInitializers.Database
         public PremierLeagueContext()
             : base("PremierLeagueDbContext")
         {
-            //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MyInitializer());
-            //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseIfModelChanges<PremierLeagueContext>());
+            //System.Data.Entity.Database.SetInitializer(new CreateDatabaseIfNotExists<PremierLeagueContext>());
+            //System.Data.Entity.Database.SetInitializer(new DropCreateDatabaseAlways<PremierLeagueContext>());
+            //System.Data.Entity.Database.SetInitializer(new MyInitializer());
+            //System.Data.Entity.Database.SetInitializer(new DropCreateDatabaseIfModelChanges<PremierLeagueContext>());
             //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MigrateDatabaseToLatestVersion<PremierLeagueContext, DatabaseInitializers.Database.Migrations.Configuration>());
-            //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseAlways<PremierLeagueContext>());
         }
         public virtual IDbSet<Team> Teams { get; set; }
         public virtual IDbSet<Player> Players { get; set; }

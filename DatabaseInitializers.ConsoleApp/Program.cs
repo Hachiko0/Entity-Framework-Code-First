@@ -10,7 +10,7 @@ namespace DatabaseInitializers.ConsoleApp
             using (var db = new PremierLeagueContext())
             {
                 var players = db.Players.ToList();
-                players.ForEach(p => System.Console.WriteLine(p.FirstName));
+                players.ForEach(p => System.Console.WriteLine(p));
             }
         }
     }

@@ -8,12 +8,10 @@ namespace DatabaseInitializers.Database
         {
             context.Players.Add(new Player()
             {
-                Age = 33,
-                FirstName = "aaa",
-                LastName = "bbb",
+                Age = 22,
+                FirstName = "Georgi",
+                LastName = "Georgiev",
             });
-
-            base.Seed(context);
         }
     }
 }
