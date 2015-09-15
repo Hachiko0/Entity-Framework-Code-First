@@ -6,15 +6,27 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace ConfigureMappings.Database
 {
+    public class MyInitializer : DropCreateDatabaseIfModelChanges<PremierLeagueContext>
+    {
+        public override void InitializeDatabase(PremierLeagueContext context)
+        {
+            //context.Database.ExecuteSqlCommand(TransactionalBehavior.DoNotEnsureTransaction
+            //    , string.Format("ALTER DATABASE {0} SET SINGLE_USER WITH ROLLBACK IMMEDIATE", context.Database.Connection.Database));
+
+            base.InitializeDatabase(context);
+        }
+    }
     public class PremierLeagueContext : DbContext
     {
         public PremierLeagueContext()
-            : base("ConfigureMappings")
+            : base("PremierLeagueDbContext")
         {
-            System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseIfModelChanges<PremierLeagueContext>());
-            //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MigrateDatabaseToLatestVersion<PremierLeagueContext, FluentApi.Database.Migrations.Configuration>());
+            //System.Data.Entity.Database.SetInitializer(new MyInitializer());
+            //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseIfModelChanges<PremierLeagueContext>());
+            System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MigrateDatabaseToLatestVersion<PremierLeagueContext, ConfigureMappings.Database.Migrations.Configuration>());
             //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseAlways<PremierLeagueContext>());
         }
+
         public virtual IDbSet<Team> Teams { get; set; }
         public virtual IDbSet<Player> Players { get; set; }
         public virtual IDbSet<User> Users { get; set; }
@@ -26,6 +38,10 @@ namespace ConfigureMappings.Database
         public virtual IDbSet<UserForeignKey> UserForeignKey { get; set; }
 
         public virtual IDbSet<Employee> Employees { get; set; }
+
+        public virtual IDbSet<Referee> Referees { get; set; }
+
+        public virtual IDbSet<Coach> Coaches { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -115,6 +131,13 @@ namespace ConfigureMappings.Database
                 .HasRequired(ufk => ufk.User)
                 .WithMany(t => t.UserForeignKeys)
                 .HasForeignKey(utf => new { utf.UserId, utf.EGNId });
+
+            //inheritance
+            modelBuilder.Entity<Referee>()
+                .ToTable("Referees");
+
+            modelBuilder.Entity<Coach>()
+                .ToTable("Coaches");
         }
     }
 }
