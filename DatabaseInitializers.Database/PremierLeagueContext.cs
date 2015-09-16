@@ -15,7 +15,8 @@ namespace DatabaseInitializers.Database
             //System.Data.Entity.Database.SetInitializer(new DropCreateDatabaseAlways<PremierLeagueContext>());
             //System.Data.Entity.Database.SetInitializer(new MyInitializer());
             //System.Data.Entity.Database.SetInitializer(new DropCreateDatabaseIfModelChanges<PremierLeagueContext>());
-            //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MigrateDatabaseToLatestVersion<PremierLeagueContext, DatabaseInitializers.Database.Migrations.Configuration>());
+            //System.Data.Entity.Database.SetInitializer(new MigrateDatabaseToLatestVersion<PremierLeagueContext, DatabaseInitializers.Database.Migrations.Configuration>());
+            //System.Data.Entity.Database.SetInitializer(new NullDatabaseInitializer<PremierLeagueContext>());
         }
         public virtual IDbSet<Team> Teams { get; set; }
         public virtual IDbSet<Player> Players { get; set; }
