@@ -22,7 +22,7 @@ namespace DataAnnotations.Database
 
         public virtual IDbSet<Address> Addresses { get; set; }
 
-        public virtual IDbSet<UserForeignKey> UserForeignKey { get; set; }
+        public virtual IDbSet<Note> Notes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

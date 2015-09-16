@@ -3,11 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAnnotations.Database
 {
-    public class UserForeignKey
+    public class Note
     {
         [Column(Order = 0)]
         public int Id { get; set; }
 
+        //[MaxLength(200)]
+        //[Column("Data", TypeName = "varchar")]
         public string SomeData { get; set; }
 
         //[ForeignKey("User")]

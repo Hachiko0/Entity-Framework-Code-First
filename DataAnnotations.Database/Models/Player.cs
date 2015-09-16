@@ -4,13 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAnnotations.Database
 {
-    [Table("Player", Schema = "admin")]
+    //[Table("Player", Schema = "admin")]
     public class Player
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
 
-        //when we update or delete, the player record is filtered by last name too and throws exception if it different than the current last name
+        //when we update or delete a player, the record is filtered by last name too and throws exception if it different than the current last name
         //[ConcurrencyCheck]
         public string LastName { get; set; }
 
@@ -22,12 +22,16 @@ namespace DataAnnotations.Database
 
         public byte[] Avatar { get; set; }
 
+        //[Index("Index_Age", IsClustered = false, IsUnique = false, Order = 0)]
         public int Age { get; set; }
+
+        //[Index("Index_Age", IsClustered = false, IsUnique = false, Order = 1)]
+        public int TshirtNumber { get; set; }
 
         //public int TeamPrimmaryKey { get; set; }
 
-        public int TeamId { get; set; } //not working(there is no primary key TeamId property in Team) unless we have foreign key attribute for the nav property
+        //public int TeamId { get; set; } //not working(there is no primary key TeamId property in Team) unless we have foreign key attribute for the nav property
         //[ForeignKey("TeamId")]
-        //public Team Team { get; set; }
+        public Team Team { get; set; }
     }
 }

@@ -20,6 +20,6 @@ namespace DataAnnotations.Database
 
         public Address Address { get; set; }
 
-        //public virtual ICollection<UserForeignKey> UserForeignKeys { get; set; }
+        //public virtual ICollection<Note> Notes { get; set; }
     }
 }
