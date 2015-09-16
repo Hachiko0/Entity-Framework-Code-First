@@ -22,5 +22,10 @@ namespace DataAnnotations.Database
 
         //[DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime DateCreated { get; set; }
+
+        //[InverseProperty("HomeTeam")]
+        //public virtual ICollection<Match> HomeMatches { get; set; }
+        //[InverseProperty("AwayTeam")]
+        //public virtual ICollection<Match> AwayMatches { get; set; }
     }
 }
