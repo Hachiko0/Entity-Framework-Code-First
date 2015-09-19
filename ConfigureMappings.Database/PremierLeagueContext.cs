@@ -54,7 +54,7 @@ namespace ConfigureMappings.Database
             //map one-to-zero-or-one
             modelBuilder.Entity<PlayerAddress>()
                 .HasRequired(pa => pa.Player)
-                .WithOptional(p => p.Address);
+                .WithOptional(p => p.Address); 
 
             //the other way around
             //modelBuilder.Entity<Player>()
