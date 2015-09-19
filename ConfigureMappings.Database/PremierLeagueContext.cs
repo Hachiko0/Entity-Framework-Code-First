@@ -23,7 +23,7 @@ namespace ConfigureMappings.Database
         {
             //System.Data.Entity.Database.SetInitializer(new MyInitializer());
             //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseIfModelChanges<PremierLeagueContext>());
-            System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MigrateDatabaseToLatestVersion<PremierLeagueContext, ConfigureMappings.Database.Migrations.Configuration>());
+            //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MigrateDatabaseToLatestVersion<PremierLeagueContext, ConfigureMappings.Database.Migrations.Configuration>());
             //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseAlways<PremierLeagueContext>());
         }
 
@@ -45,17 +45,15 @@ namespace ConfigureMappings.Database
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //configure relationships
-
             //one-to-zero-or-one
 
             //map the primary key because it does not follow the conventions
             modelBuilder.Entity<PlayerAddress>()
                 .HasKey(pa => pa.PlayerId);
 
-            //map the one-to-zero-or-one
+            //map one-to-zero-or-one
             modelBuilder.Entity<PlayerAddress>()
-                .HasRequired(ra => ra.Player)
+                .HasRequired(pa => pa.Player)
                 .WithOptional(p => p.Address);
 
             //the other way around
@@ -63,10 +61,20 @@ namespace ConfigureMappings.Database
             //    .HasOptional(p => p.Address)
             //    .WithRequired(pa => pa.Player);
 
+            //map one-to-one
+            //modelBuilder.Entity<PlayerAddress>()
+            //    .HasRequired(pa => pa.Player)
+            //    .WithRequiredPrincipal(p => p.Address);
+
+            //the other way around
+            //modelBuilder.Entity<Player>()
+            //    .HasRequired(p => p.Address)
+            //    .WithRequiredDependent(pa => pa.Player);
+
             //one-to-many
             modelBuilder
                 .Entity<Player>()
-                .HasRequired(p => p.Team)
+                .HasOptional(p => p.Team)
                 .WithMany(t => t.Players)
                 .HasForeignKey(p => p.TeamId)
                 .WillCascadeOnDelete(false);

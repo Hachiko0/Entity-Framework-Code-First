@@ -13,16 +13,26 @@ namespace ConfigureMappings.ConsoleApp
         {
             using(var context = new PremierLeagueContext())
             {
-                var referee = new Referee
+                var playerAddress = new PlayerAddress { City = "Varna" };
+                var player = new Player
                 {
-                    EGN = "3274723428",
-                    FirstName = "Howard",
-                    FamilyName = "Webb",
-                    RedCardsShowed = 65,
-                    YellowCardsShowed = 150,
+                    FirstName = "Ivan",
+                    LastName = "Ivanov",
+                    Age = 34,
+                    Address = playerAddress
                 };
+                context.Players.Add(player);
 
-                context.Referees.Add(referee);
+                //var referee = new Referee
+                //{
+                //    EGN = "3274723428",
+                //    FirstName = "Howard",
+                //    FamilyName = "Webb",
+                //    RedCardsShowed = 65,
+                //    YellowCardsShowed = 150,
+                //};
+
+                //context.Referees.Add(referee);
                 context.SaveChanges();
             }
         }
