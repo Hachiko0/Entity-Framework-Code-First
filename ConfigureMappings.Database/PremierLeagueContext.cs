@@ -146,6 +146,24 @@ namespace ConfigureMappings.Database
 
             modelBuilder.Entity<Coach>()
                 .ToTable("Coaches");
+
+            //table splitting
+            //split 1 table into two separate entities(classes)
+            modelBuilder
+                .Entity<PlayerPhoto>()
+                .HasKey(pp => pp.PlayerId);
+
+            modelBuilder
+                .Entity<PlayerPhoto>()
+                .ToTable("Players");
+
+            modelBuilder
+                .Entity<Player>()
+                .ToTable("Players");
+
+            modelBuilder.Entity<Player>()
+                .HasRequired(p => p.Photo)
+                .WithRequiredDependent();
         }
     }
 }
