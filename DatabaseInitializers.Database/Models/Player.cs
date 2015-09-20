@@ -15,7 +15,7 @@ namespace DatabaseInitializers.Database
 
         public override string ToString()
         {
-            return $"{this.FirstName} {this.LastName} ,Age: {this.Age}";
+            return string.Format("{0} {1}, Age: {2}", this.FirstName, this.LastName, this.Age);
         }
     }
 }

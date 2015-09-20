@@ -10,22 +10,22 @@ namespace DataAnnotations.Database
         [Key]
         public int TeamPrimmaryKey { get; set; }
 
-        //[MaxLength(10)]
-        //[MinLength(2)]
+        [MaxLength(10)]
+        [MinLength(2)]
         public string Name { get; set; }
 
         public string Division { get; set; }
 
         public int GoalScored { get; set; }
 
-        //public virtual ICollection<Player> Players { get; set; }
+        public virtual ICollection<Player> Players { get; set; }
 
-        //[DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime DateCreated { get; set; }
 
-        //[InverseProperty("HomeTeam")]
-        //public virtual ICollection<Match> HomeMatches { get; set; }
-        //[InverseProperty("AwayTeam")]
-        //public virtual ICollection<Match> AwayMatches { get; set; }
+        [InverseProperty("HomeTeam")]
+        public virtual ICollection<Match> HomeMatches { get; set; }
+        [InverseProperty("AwayTeam")]
+        public virtual ICollection<Match> AwayMatches { get; set; }
     }
 }

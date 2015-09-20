@@ -2,7 +2,7 @@
 
 namespace DataAnnotations.Database
 {
-    //[ComplexType]
+    [ComplexType]
     public class Address
     {
         public int Id { get; set; }
