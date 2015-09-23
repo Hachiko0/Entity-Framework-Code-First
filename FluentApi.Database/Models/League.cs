@@ -17,5 +17,7 @@ namespace FluentApi.Database
         public string Country { get; set; }
 
         public int NumberOfTeams { get; set; }
+
+        public virtual ICollection<Player> Players { get; set; }
     }
 }

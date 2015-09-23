@@ -13,6 +13,8 @@ namespace FluentApi.Database
 
         public int Age { get; set; }
 
+        public virtual Team Team { get; set; }
+
         public override string ToString()
         {
             return string.Format("{0} {1}", this.FirstName, this.LastName);
