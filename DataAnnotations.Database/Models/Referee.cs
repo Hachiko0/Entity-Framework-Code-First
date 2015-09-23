@@ -4,7 +4,7 @@ namespace DataAnnotations.Database.Models
 {
     public class Referee
     {
-        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         public string FullName { get; set; }
