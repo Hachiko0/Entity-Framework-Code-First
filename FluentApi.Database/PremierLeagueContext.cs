@@ -13,7 +13,7 @@ namespace FluentApi.Database
         public PremierLeagueContext()
             : base("PremierLeagueDbContext")
         {
-            System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseIfModelChanges<PremierLeagueContext>());
+            //System.Data.Entity.Database.SetInitializer(new DropCreateDatabaseIfModelChanges<PremierLeagueContext>());
             //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new MigrateDatabaseToLatestVersion<PremierLeagueContext, FluentApi.Database.Migrations.Configuration>());
             //System.Data.Entity.Database.SetInitializer<PremierLeagueContext>(new DropCreateDatabaseAlways<PremierLeagueContext>());
         }
@@ -132,6 +132,15 @@ namespace FluentApi.Database
             modelBuilder.Entity<League>()
                 .Property(l => l.NumberOfTeams)
                 .IsOptional();
+
+            //modelBuilder.Entity<Player>().MapToStoredProcedures();
+            modelBuilder.Entity<Player>().MapToStoredProcedures(sp =>
+            {
+                sp.Insert(p => p.HasName("Insert_Player")
+                .Parameter(n => n.Team.TeamPrimmaryKey, "TeamId")
+                .Navigation<League>(l => l.Players, n => n.Parameter(pa => pa.Id, "LigaId"))
+                .Result(n => n.Id, "PlayerId"));
+            });
 
             //modelBuilder.Configurations.AddFromAssembly(Assembly.GetExecutingAssembly());
 
