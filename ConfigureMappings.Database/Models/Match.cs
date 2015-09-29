@@ -11,6 +11,7 @@ namespace ConfigureMappings.Database
         public int Id { get; set; }
 
         public string Stadium { get; set; }
+        public string FirstDev { get; set; }
 
         public int Crowd { get; set; }
 
